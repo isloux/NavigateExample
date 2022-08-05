@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./styles.css";
 import Felicitations from "./felicitations";
@@ -7,7 +7,7 @@ const Home = () => {
   const navigate = useNavigate();
   const { state } = useLocation();
 
-  const donneAutoriation = () => {
+  const donneAutorisation = () => {
     if (state) return state.testFait && !state.malade;
     else return false;
   };
@@ -28,7 +28,7 @@ const Home = () => {
         Faire un test COVID-19
       </button>
       <hr />
-      <Felicitations autorisation={donneAutoriation()} />
+      <Felicitations autorisation={donneAutorisation()} />
       <button onClick={cliqueImpression}>
         Imprimer un passe bistrot-piscine
       </button>
