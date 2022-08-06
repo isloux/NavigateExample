@@ -1,5 +1,6 @@
 {
   "name": "react",
+  "homepage": "https://isloux.github.io/navigate-deployed",
   "version": "1.0.0",
   "description": "React example starter project",
   "keywords": [
@@ -8,6 +9,7 @@
   ],
   "main": "src/index.js",
   "dependencies": {
+    "gh-pages": "^4.0.0",
     "moment": "2.29.4",
     "react": "18.0.0",
     "react-dom": "18.0.0",
@@ -21,6 +23,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",   
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
